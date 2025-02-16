@@ -1,1 +1,15 @@
-keytest
+-- UILibrary.lua
+local UILibrary = {}
+
+function UILibrary.CreateFrame(parent, size, position, backgroundColor)
+    local frame = Instance.new("Frame")
+    frame.Size = size or UDim2.new(0, 200, 0, 100)
+    frame.Position = position or UDim2.new(0, 0, 0, 0)
+    frame.BackgroundColor3 = backgroundColor or Color3.fromRGB(255, 255, 255)
+    frame.Parent = parent
+    return frame
+end
+
+-- You can add other UI components like buttons, labels, etc.
+
+return UILibrary
